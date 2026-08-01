@@ -15,7 +15,6 @@ abstract: >-
   campaigns, multi-engine consumers, multi-container and physical two-host
   determinism results.
 license: CC-BY-4.0
-repository-code: "https://github.com/..."
 keywords:
   - proposer election
   - permissioned systems
