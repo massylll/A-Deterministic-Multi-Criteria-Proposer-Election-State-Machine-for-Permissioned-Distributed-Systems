@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "DMPE: Deterministic Multi-Criteria Proposer Election (artifact)"
+doi: https://doi.org/10.5281/zenodo.21730117
 authors:
   - family-names: Benarab
     given-names: Massyl
