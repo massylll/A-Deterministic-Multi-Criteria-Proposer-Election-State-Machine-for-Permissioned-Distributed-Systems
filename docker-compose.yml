@@ -1,0 +1,89 @@
+# Massyl Benarab (ORCID: 0009-0006-9405-3374)
+# Younes Aoures (ORCID: 0009-0009-6551-1294)
+
+services:
+  history:
+    build:
+      context: .
+      dockerfile: history-server/Dockerfile
+    environment:
+      CHAIN_ID: dmpe-demo
+      N: ${N:-16}
+      MAX_ROUNDS: ${ROUNDS:-50}
+      HISTORY_PORT: "8080"
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 1s
+      timeout: 2s
+      retries: 30
+    networks:
+      - shared-net
+  node-0:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    environment:
+      NODE_ID: node-0
+      HISTORY_URL: http://history:8080
+      CHAIN_ID: dmpe-demo
+      N: ${N:-16}
+      ROUNDS: ${ROUNDS:-50}
+      START_DELAY_MS: "0"
+    depends_on:
+      history:
+        condition: service_healthy
+    networks:
+      - shared-net
+  node-1:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    environment:
+      NODE_ID: node-1
+      HISTORY_URL: http://history:8080
+      CHAIN_ID: dmpe-demo
+      N: ${N:-16}
+      ROUNDS: ${ROUNDS:-50}
+      START_DELAY_MS: "15"
+    depends_on:
+      history:
+        condition: service_healthy
+    networks:
+      - shared-net
+  node-2:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    environment:
+      NODE_ID: node-2
+      HISTORY_URL: http://history:8080
+      CHAIN_ID: dmpe-demo
+      N: ${N:-16}
+      ROUNDS: ${ROUNDS:-50}
+      START_DELAY_MS: "30"
+    depends_on:
+      history:
+        condition: service_healthy
+    networks:
+      - shared-net
+  node-3:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    environment:
+      NODE_ID: node-3
+      HISTORY_URL: http://history:8080
+      CHAIN_ID: dmpe-demo
+      N: ${N:-16}
+      ROUNDS: ${ROUNDS:-50}
+      START_DELAY_MS: "45"
+    depends_on:
+      history:
+        condition: service_healthy
+    networks:
+      - shared-net
+networks:
+  shared-net:
+    driver: bridge

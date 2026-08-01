@@ -1,0 +1,54 @@
+DMPE baselines campaign — Scalar / RepOnly / EligibleRR vs DMPE / Clique
+
+=== Baseline multi-seed headline metrics ===
+R=2000, seeds=9 (42..50)
+
+n      policy         PQ_iqm     PQ_std   Nak_mean    Nak_std   BadShare   tie_frac     lat_us
+16     DMPE           0.4485     0.0234       5.11       0.31     0.2977     0.0594       2.54
+16     Scalar         0.4719     0.0116       5.00       0.00     0.1543     0.0002       1.74
+16     RepOnly        0.4759     0.0112       5.00       0.00     0.1395     0.0009       1.50
+16     EligibleRR     0.3776     0.0057       9.00       0.00     0.5000     0.0000       0.89
+16     Clique         0.3776     0.0057       9.00       0.00     0.5000     0.0000       0.23
+40     DMPE           0.4545     0.0112      11.11       0.31     0.2687     0.0252       8.56
+40     Scalar         0.4756     0.0086      11.00       0.00     0.1563     0.0004       1.98
+40     RepOnly        0.4757     0.0088      11.00       0.00     0.1493     0.0017       1.89
+40     EligibleRR     0.3804     0.0047      21.00       0.00     0.5000     0.0000       1.85
+40     Clique         0.3804     0.0047      21.00       0.00     0.5000     0.0000       0.57
+100    DMPE           0.4616     0.0123      26.78       0.42     0.2464     0.0174      53.77
+100    Scalar         0.4797     0.0065      26.00       0.00     0.1459     0.0007       3.04
+100    RepOnly        0.4792     0.0069      26.00       0.00     0.1445     0.0049       3.50
+100    EligibleRR     0.3807     0.0040      51.00       0.00     0.5000     0.0000       1.78
+100    Clique         0.3807     0.0040      51.00       0.00     0.5000     0.0000       1.21
+
+=== Held-out independent FSR (n=16, R=4000, seed=1001) ===
+Finalisation model: independentMerit (no Load/Aff; not ranking weights)
+policy     engine        FSR_all   FSR_held    PQ_held
+DMPE       Clique         0.8898     0.8815     0.4167
+DMPE       IBFT           0.8892     0.8765     0.4167
+DMPE       HotStuff       0.8842     0.8710     0.4167
+Scalar     Clique         0.8918     0.8810     0.4053
+Scalar     IBFT           0.8900     0.8690     0.4053
+Scalar     HotStuff       0.8890     0.8720     0.4053
+RepOnly    Clique         0.8905     0.8780     0.4127
+RepOnly    IBFT           0.8868     0.8630     0.4127
+RepOnly    HotStuff       0.8882     0.8695     0.4127
+EligibleRR Clique         0.8880     0.8960     0.4213
+EligibleRR IBFT           0.8870     0.8965     0.4213
+EligibleRR HotStuff       0.8845     0.8945     0.4213
+Clique     Clique         0.8885     0.8885     0.3723
+Clique     IBFT           0.8802     0.8840     0.3723
+Clique     HotStuff       0.8780     0.8815     0.3723
+
+=== Cluster lift multi-seed (R=1500, 5 seeds) ===
+N      K    policy      lift_mean   lift_std
+16     4    DMPE            1.180      0.184
+16     4    Scalar          1.318      0.127
+16     4    RepOnly         1.430      0.135
+16     4    EligibleRR      1.003      0.000
+16     4    Clique          1.003      0.000
+32     8    DMPE            1.286      0.132
+32     8    Scalar          1.444      0.048
+32     8    RepOnly         1.466      0.051
+32     8    EligibleRR      1.003      0.000
+32     8    Clique          1.003      0.000
+DONE

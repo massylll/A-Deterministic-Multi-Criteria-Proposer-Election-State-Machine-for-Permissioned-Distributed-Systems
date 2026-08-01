@@ -1,0 +1,18 @@
+=== DMPE multi-seed headline metrics (A6) ===
+R=2000, seeds=9 (42..50), uniform Borda vs Clique
+
+n      policy       PQ_iqm     PQ_std   Nak_mean    Nak_std   BadShare   tie_frac     lat_us
+16     DMPE         0.4488     0.0233       5.11       0.31     0.2970     0.0601       2.53
+16     Clique       0.3776     0.0057       9.00       0.00     0.5000     0.0000       0.24
+40     DMPE         0.4547     0.0113      11.11       0.31     0.2694     0.0258      10.14
+40     Clique       0.3804     0.0047      21.00       0.00     0.5000     0.0000       0.61
+100    DMPE         0.4615     0.0122      26.67       0.47     0.2462     0.0179      51.69
+100    Clique       0.3807     0.0040      51.00       0.00     0.5000     0.0000       1.14
+
+--- Cluster lift multi-seed (R=1500, 5 seeds) ---
+N      K    policy    lift_mean   lift_std
+16     4    DMPE          1.177      0.183
+16     4    Clique        1.003      0.000
+32     8    DMPE          1.289      0.133
+32     8    Clique        1.003      0.000
+DONE

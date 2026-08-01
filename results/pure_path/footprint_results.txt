@@ -1,0 +1,13 @@
+=== DMPE pure-kernel footprint (ElectUniformBorda) ===
+Timed path excludes warm-up; MemStats TotalAlloc/Mallocs deltas per op.
+
+n            rounds          ns/op         B/op    allocs/op
+16            20000         2405.6         1543        15.64
+40            10000         7185.7         3190        16.41
+100            3000        29856.4         7315        17.67
+200            1000       123525.4        15117        30.54
+
+--- Peak HeapAlloc after ElectUniformBorda (single shot, n=100) ---
+HeapAlloc before snapshot+elect: 40440 B
+HeapAlloc after  snapshot+elect: 58392 B (delta 17952 B)
+DONE

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "DMPE: Deterministic Multi-Criteria Proposer Election (artifact)"
+authors:
+  - family-names: Benarab
+    given-names: Massyl
+    orcid: "https://orcid.org/0009-0006-9405-3374"
+  - family-names: Aoures
+    given-names: Younes
+    orcid: "https://orcid.org/0009-0009-6551-1294"
+abstract: >-
+  Artifact for DMPE — a deterministic multi-criteria proposer-election
+  preprocessing service for permissioned systems. Includes the pure election
+  kernel, observation-aware baselines, correlation-continuum and fallback
+  campaigns, multi-engine consumers, multi-container and physical two-host
+  determinism results.
+license: CC-BY-4.0
+repository-code: "https://github.com/..."
+keywords:
+  - proposer election
+  - permissioned systems
+  - deterministic systems
+  - Proof-of-Authority
+  - multi-criteria decision analysis

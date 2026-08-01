@@ -1,0 +1,7 @@
+rounds           : 200
+processes/round  : 20
+mismatches_global: 0
+pair_mismatch_cross_host: 0
+pair_mismatch_same_host : 0
+elect_us mean    : 18.9 us
+pull_us  mean    : 6833.7 us

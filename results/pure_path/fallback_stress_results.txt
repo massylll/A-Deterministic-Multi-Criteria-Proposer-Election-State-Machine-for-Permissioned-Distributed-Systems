@@ -1,0 +1,19 @@
+=== Forced-fallback concentration stress ===
+Measures fallback rate and max per-validator share under DMPE.
+Theoretical 1/S bound applies only when fallback rate = 0.
+
+regime       n     fb_rate maxShare      1/S meanElig     uniq ok_bound
+benign       16      0.000   0.1115   0.1111     8.02      9.8      yes
+mild_shield  16      0.000   0.1115   0.1111     4.02     10.0      yes
+heavy_shield 16      0.172   0.1190   0.1111     0.84     16.0    mixed
+near_total   16      0.697   0.1252   0.1111     0.30     16.0       fb
+all_over     16      0.804   0.1070   0.1111     0.20     16.0       fb
+benign       40      0.000   0.0480   0.0476    20.11     22.8      yes
+mild_shield  40      0.000   0.0480   0.0476    10.11     21.6      yes
+heavy_shield 40      0.513   0.0505   0.0476     0.56     31.0       fb
+near_total   40      0.841   0.0505   0.0476     0.16     40.0       fb
+all_over     40      0.962   0.0361   0.0476     0.04     40.0       fb
+
+Under all_over, selection should approach full-set RR (proportional).
+Expected max share ≈ 1/n (plus cooldown interaction when recovery fires).
+DONE in 208ms

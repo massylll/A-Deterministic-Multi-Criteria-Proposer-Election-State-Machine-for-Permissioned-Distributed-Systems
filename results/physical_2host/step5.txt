@@ -1,0 +1,65 @@
+PS C:\Users\massy> curl http://192.168.100.7:8080/committee
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"chainID":"physical-2host","validators":["V0000","V0001","V0002","V0003","V0004","V0005","V0006","V0007","V0008","V0009","V001
+                    0","V0011","V0012","V0013","V0014","V0015"]}
+
+RawContent        : HTTP/1.1 200 OK
+                    Content-Length: 172
+                    Content-Type: application/json
+                    Date: Fri, 31 Jul 2026 15:22:10 GMT
+
+                    {"chainID":"physical-2host","validators":["V0000","V0001","V0002","V0003","V0004","V0005","...
+Forms             : {}
+Headers           : {[Content-Length, 172], [Content-Type, application/json], [Date, Fri, 31 Jul 2026 15:22:10 GMT]}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : System.__ComObject
+RawContentLength  : 172
+
+
+
+===============================================================
+
+PS C:\Users\massy> ping -n 30 192.168.100.7
+
+Envoi d’une requête 'Ping'  192.168.100.7 avec 32 octets de données :
+Réponse de 192.168.100.7 : octets=32 temps=7 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=6 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=78 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=89 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=4 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=12 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=30 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=5 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=113 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=17 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=36 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=4 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=3 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=109 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=114 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=26 ms TTL=128
+Réponse de 192.168.100.7 : octets=32 temps=31 ms TTL=128
+
+Statistiques Ping pour 192.168.100.7:
+    Paquets : envoyés = 30, reçus = 30, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 3ms, Maximum = 114ms, Moyenne = 24ms
+PS C:\Users\massy>

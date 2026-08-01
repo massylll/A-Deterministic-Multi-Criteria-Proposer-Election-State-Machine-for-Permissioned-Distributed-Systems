@@ -1,0 +1,26 @@
+=== DMPE RQ7 / construct-validity suite ===
+n=16  nSlow=4  rounds=4000  seed=42  chainID=rq7-experiment
+
+skew slow-class size: 4
+--- Heterogeneous population ---
+weighted (prod)     PQ=0.4791  PQ_first=0.4792  PQ_second=0.4790  |ΔPQ|=0.0002  tieFrac=0.000  τ(vs prod)=1.000
+uniform (default)   PQ=0.4713  PQ_first=0.4713  PQ_second=0.4712  |ΔPQ|=0.0001  tieFrac=0.046  τ(vs prod)=0.848
+wR×0.5              PQ=0.4782  PQ_first=0.4787  PQ_second=0.4777  |ΔPQ|=0.0010  tieFrac=0.001  τ(vs prod)=0.957
+wR×1.5              PQ=0.4792  PQ_first=0.4792  PQ_second=0.4792  |ΔPQ|=0.0001  tieFrac=0.000  τ(vs prod)=1.000
+lat-heavy           PQ=0.4786  PQ_first=0.4787  PQ_second=0.4786  |ΔPQ|=0.0001  tieFrac=0.001  τ(vs prod)=1.000
+
+--- Latency-skew population (nSlow minority) ---
+weighted (prod)     PQ=0.4055  PQ_first=0.4055  PQ_second=0.4054  |ΔPQ|=0.0000  slowShare=0.111  tieFrac=0.000  τ=1.000
+uniform (default)   PQ=0.4055  PQ_first=0.4055  PQ_second=0.4054  |ΔPQ|=0.0000  slowShare=0.111  tieFrac=0.000  τ=1.000
+wR×0.5              PQ=0.4055  PQ_first=0.4055  PQ_second=0.4054  |ΔPQ|=0.0000  slowShare=0.111  tieFrac=0.000  τ=1.000
+wR×1.5              PQ=0.4055  PQ_first=0.4055  PQ_second=0.4054  |ΔPQ|=0.0000  slowShare=0.111  tieFrac=0.000  τ=1.000
+lat-heavy           PQ=0.4299  PQ_first=0.4299  PQ_second=0.4300  |ΔPQ|=0.0001  slowShare=0.000  tieFrac=0.002  τ=0.924
+
+--- Clique baseline (heterogeneous) ---
+Clique              PQ=0.3723  PQ_first=0.3723  PQ_second=0.3723
+
+Interpretation:
+  • Uniform vs weighted: if τ≈1 and |ΔPQ| small, weights are inert → default to uniform Borda.
+  • Held-out: |PQ_first − PQ_second| measures temporal stability of the quality signal.
+  • tieFrac: fraction of rounds where SHA-256 tie-break was decisive (tieSet>1).
+  • slowShare: under latency skew, lower is better (quality-aware rejection of slow class).

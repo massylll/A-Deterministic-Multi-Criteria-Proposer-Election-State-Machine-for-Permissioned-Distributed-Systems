@@ -1,0 +1,16 @@
+bin/
+*.exe
+*.test
+*.out
+vendor/
+**/logs/
+dmpe-run/
+*.jsonl
+!results/**/*.jsonl
+!results/**/*.txt
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+**/prestigebft_smoke_*/

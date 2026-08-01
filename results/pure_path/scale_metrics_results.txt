@@ -1,0 +1,35 @@
+=== DMPE scale_metrics (uniform Borda default) ===
+
+--- Multi-seed policy metrics (R=4000, 5 seeds) ---
+n      policy       PQ_iqm     PQ_std   Nak_mean   BadC_iqm   tie_frac
+16     DMPE         0.4299     0.0228       5.00      5.765     0.0525
+16     Clique       0.3773     0.0071       9.00      8.000     0.0000
+40     DMPE         0.4485     0.0160      11.20     12.807     0.0262
+40     Clique       0.3757     0.0050      21.00     20.000     0.0000
+100    DMPE         0.4485     0.0071      27.00     29.783     0.0144
+100    Clique       0.3803     0.0014      51.00     50.000     0.0000
+
+--- Cluster lift (R=2000, seed=42; lift = cluster_share / fair_share) ---
+N      K    policy         lift
+16     2    DMPE          1.700
+16     2    Clique        1.000
+16     4    DMPE          1.628
+16     4    Clique        1.000
+16     6    DMPE          1.271
+16     6    Clique        1.000
+16     8    DMPE          1.136
+16     8    Clique        1.000
+32     4    DMPE          1.320
+32     4    Clique        1.008
+32     8    DMPE          1.364
+32     8    Clique        1.008
+32     12   DMPE          1.215
+32     12   Clique        1.008
+32     16   DMPE          1.448
+32     16   Clique        1.008
+
+--- Tie-set size histogram (n=16, R=4000, seed=42, uniform Borda) ---
+  tieSet=1  rounds=3783  frac=0.9457
+  tieSet=2  rounds=203  frac=0.0508
+  tieSet=3  rounds=14  frac=0.0035
+DONE

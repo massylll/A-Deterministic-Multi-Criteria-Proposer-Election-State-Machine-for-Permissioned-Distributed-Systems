@@ -1,0 +1,44 @@
+
+=== DMPE→{Clique,IBFT,HotStuff} | elect=uniform-Borda | n=16 rounds=4000 seed=1001 ===
+cross-engine proposer agreement: 4000/4000 (100.0%)
+PoolQuality (all):      0.4173
+PoolQuality (held-out): 0.4405
+engine      FSR_all   FSR_heldout
+Clique      0.8588    0.8485
+IBFT        0.8628    0.8475
+HotStuff    0.8605    0.8470
+
+=== Clique-elect→{Clique,IBFT,HotStuff} | elect=round-robin | n=16 rounds=4000 seed=1002 ===
+cross-engine proposer agreement: 4000/4000 (100.0%)
+PoolQuality (all):      0.2621
+PoolQuality (held-out): 0.2621
+engine      FSR_all   FSR_heldout
+Clique      0.8345    0.8285
+IBFT        0.8210    0.8240
+HotStuff    0.8170    0.8180
+
+=== DMPE n=32 | elect=uniform-Borda | n=32 rounds=4000 seed=1003 ===
+cross-engine proposer agreement: 4000/4000 (100.0%)
+PoolQuality (all):      0.4267
+PoolQuality (held-out): 0.4247
+engine      FSR_all   FSR_heldout
+Clique      0.8840    0.8915
+IBFT        0.8865    0.8865
+HotStuff    0.8882    0.8890
+
+=== MAD / finality-boundary  n=16  rounds=2000 ===
+agreement on identical finalized snapshot: 2000/2000
+divergence when Domain B uses stale prefix:  1582/2000
+Interpretation: DMPE requires a finalized prefix (Theorem 1);
+stale non-finalized views can diverge — that is consensus's responsibility.
+
+=== Pure-path election latency (repeated trials, uniform Borda) ===
+N       mean_us  p95_us
+16          3.8     6.0
+32         16.8    18.0
+40         41.5    82.0
+70        100.4   129.0
+100       191.7   222.0
+200       735.5   814.0
+300      1762.0  2184.0
+500      4589.6  5426.0
