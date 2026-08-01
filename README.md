@@ -24,7 +24,7 @@ See [LICENSE](LICENSE).
 
 ## Citation
 
-If you use this artifact, please cite the paper (DOI will be added after Zenodo deposit):
+If you use this artifact, please cite the paper:
 
 ```bibtex
 @article{dmpe2026,
@@ -33,6 +33,7 @@ If you use this artifact, please cite the paper (DOI will be added after Zenodo 
   author  = {Benarab, Massyl and Aoures, Younes},
   year    = {2026},
   note    = {Preprint; artifact: this repository}
+  doi     = {https://doi.org/10.5281/zenodo.21730117}
 }
 ```
 
